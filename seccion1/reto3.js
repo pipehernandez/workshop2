@@ -24,3 +24,13 @@ while(restante >= (umbral)){
         }
     } else break
 }
+
+function getCheapestProduct() {
+    const theCheapest = listExtras.reduce((acc, el, indice, array) => {
+        if (el.precio < acc) {
+            acc = el.precio;
+        }
+        return acc;
+    }, 100000);
+    return theCheapest;
+}
