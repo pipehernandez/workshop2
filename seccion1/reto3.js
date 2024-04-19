@@ -26,11 +26,13 @@ while(restante >= (umbral)){
 }
 
 function getCheapestProduct() {
-    const theCheapest = listExtras.reduce((acc, el, indice, array) => {
-        if (el.precio < acc) {
-            acc = el.precio;
+    const theCheapest = listExtras.reduce((acc, extra, indice, array) => {
+        if (extra.precio < acc) {
+            acc = extra.precio;
         }
         return acc;
     }, 100000);
     return theCheapest;
 }
+
+console.log(getCheapestProduct(listExtras.extra));
